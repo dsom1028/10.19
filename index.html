@@ -72,5 +72,110 @@
 
 		main article figure img{width:100%;}
 		
+		<body>
+<header id="header">
+	<div id="logo">if문의 이해</div>
+	<div id="menu">
+		<ul>
+			<li id="menuA">A</li>
+			<li id="menuB">B</li>
+			<li id="menuC">C</li>
+			<li id="menuD">D</li>
+			<li id="menuE">E</li>
+		</ul>
+	</div>
+</header>
+<div class="section" id="sectionA">
+	<h1 id="titleA">오늘은 조건문 if에 대해서 배워봅시다.</h1>
+</div>
+<div class="section" id="sectionB">
+	<h1 id="titleB">if(조건){ 실행 }</h1>
+</div>
+<div class="section" id="sectionC">
+	<h1 id="titleC">코딩에서 가장 중요한 문법입니다.</h1>
+</div>
+<div class="section" id="sectionD">
+	<h1 id="titleD">스크롤 이벤트와 if문을 결합해 스크롤에 따른 다양한 애니메이션 구현</h1>
+</div>
+<div class="section" id="sectionE">
+	<h1 id="titleE">document.documentElement.scrollTop을 통해 스크롤 높이를 받습니다.</h1>
+</div>
+<div class="section">
+	<h1 style="color:black">연습해봅시다.</h1>
+</div>
+<script>
+	window.onscroll = function(){
+		console.log(document.body.scrollTop);
+		var scrollH = document.body.scrollTop;
+		if(scrollH > 50){
+			header.style.height = "44px";
+			header.style.position = "fixed";
+			header.style.top = "0px";
+			header.style.zIndex = "9999";
+			menu.style.left = "400px";
+			menu.style.top = "-70px";
+			logo.style.left = "0px";
+			sectionA.style.marginTop = "44px";
+		}else{
+			header.style.height = "300px";
+			header.style.position = "relative";
+			header.style.top = "0px";
+			logo.style.left = "calc(50% - 100px)";
+			menu.style.left = "calc(50% - 350px)";
+			menu.style.top = "80px";
+			sectionA.style.marginTop = "0px";
+
+		}
+
+		if(scrollH > 280){
+			titleA.style.paddingTop = "500px";
+			menuA.style.background = "orange";
+		}else{
+			titleA.style.paddingTop = "280px";
+			menuA.style.background = "white";
+		}
+
+		if(scrollH > 680){
+			titleB.style.paddingTop = "500px";
+			titleB.style.transform = "rotateY(180deg)";
+			menuB.style.background = "orange";
+		}else{
+			titleB.style.paddingTop = "280px";
+			titleB.style.transform = "rotateY(0deg)";
+			menuB.style.background = "white";
+		}
+
+		if(scrollH > 1198){
+			sectionC.style.backgroundAttachment = "fixed";
+			menuC.style.background = "orange";
+		}else{
+			sectionC.style.backgroundAttachment = "scroll";
+			menuC.style.background = "white";
+		}
+
+		if(scrollH > 1816){
+			sectionD.style.background = "yellow";
+			titleD.style.color = "black";
+			menuD.style.background = "orange";
+		}else{
+			sectionD.style.background = "green";
+			titleD.style.color = "white";
+			menuD.style.background = "white";
+		}
+
+		if(scrollH > 2400){
+			titleE.style.fontSize = "1.5em";
+			titleE.style.fontWeight = "700";
+			menuE.style.background = "orange";
+		}else{
+			titleE.style.fontSize = "3em";
+			titleE.style.fontWeight = "200";
+			menuE.style.background = "white";
+		}
+
+	}
+</script>
+</body>
+
 		
 	</style>

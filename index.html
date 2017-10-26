@@ -8,8 +8,8 @@
 	
 	
 </head>
+	<script src="scrollByAnimated.js"></script>
 <body>
-	
 	
 	
 	
@@ -237,6 +237,24 @@
 		#sectionE{ background: purple; transition: all 1s; }
 
 		
+		
+		
+		
+		
+<script>
+		window.onload = function(){window.scrollTo(0,0);}
+		
+		m1.onclick = function(){ aniScroll(0); }
+		m2.onclick = function(){ aniScroll(600); }
+		m3.onclick = function(){ aniScroll(1200); }
+		m4.onclick = function(){ aniScroll(1800); }
+		m5.onclick = function(){ aniScroll(2400); }
+		m6.onclick = function(){ aniScroll(3000); }
+		function aniScroll(destination){
+			var distance = destination - document.body.scrollTop;
+			scrollByAnimated(distance, 250);
+		}
+	</script>
 		
 		
 		

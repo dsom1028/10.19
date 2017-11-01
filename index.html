@@ -85,48 +85,6 @@
 	}
 </script>
 
-
-	
-	
-	
-	
-<div id="kirin">
-		<img src="emoji-1971625_960_720.png">
-	</div>
-	<script>
-		var state = "stop";
-		//현재 클릭할때마다 움직임을 토글하기 위해 현재 상태를 의미하는 변수를 하나 만들었습니다.
-
-		//기린아를 클릭하면
-		kirin.onclick = function(){
-			//우선 콘솔에서 잘 클릭되는지 체크
-			console.log("clicked!!");
-
-			//만약에 state가 stop이면 
-			if(state == "stop"){
-				kirin.style.animationPlayState = "running";
-				//스타일에서 애니메이션을 플레이해
-				state = "play";
-				//현재 상태를 플레이로 변경
-			}else{
-				//만약 stop이 아닌 상황이면
-				kirin.style.animationPlayState = "paused";
-				//스타일에서 애니메이션을 정지시켜
-				state = "stop";
-				//현재 상태를 스톱으로 변경
-			}
-		}
-	
-	</script>	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -251,3 +209,32 @@
 
 		
 	</style>
+<div id="kirin">
+		<img src="emoji-1971625_960_720.png">
+	</div>
+	<script>
+		var state = "stop";
+		//현재 클릭할때마다 움직임을 토글하기 위해 현재 상태를 의미하는 변수를 하나 만들었습니다.
+
+		//기린아를 클릭하면
+		kirin.onclick = function(){
+			//우선 콘솔에서 잘 클릭되는지 체크
+			console.log("clicked!!");
+
+			//만약에 state가 stop이면 
+			if(state == "stop"){
+				kirin.style.animationPlayState = "running";
+				//스타일에서 애니메이션을 플레이해
+				state = "play";
+				//현재 상태를 플레이로 변경
+			}else{
+				//만약 stop이 아닌 상황이면
+				kirin.style.animationPlayState = "paused";
+				//스타일에서 애니메이션을 정지시켜
+				state = "stop";
+				//현재 상태를 스톱으로 변경
+			}
+		}
+	
+	</script>	
+	
